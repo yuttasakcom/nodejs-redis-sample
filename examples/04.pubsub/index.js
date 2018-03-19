@@ -15,7 +15,7 @@ io.on('connection', socket => {
 
   socket.on('chat', (msg, cb) => {
     console.log(msg)
-    socket.emit('reply', msg)
+    io.emit('reply', msg)
   })
 
   socket.on('disconnect', () => console.log('User was disconnected'))
